@@ -1,0 +1,1 @@
+import{S as o}from"./-qH3dQ9-.js";import{u as t}from"./BKhM49SH.js";import{g as r,G as c,o as s}from"./CgSCGSuQ.js";import"./e9Ln5R2v.js";import"./UYNKEWoQ.js";const f={__name:"consulting",setup(n){const{trackServiceView:e}=t();return r(()=>{e("consulting")}),(a,i)=>(s(),c(o,{"service-type":"consulting"}))}};export{f as default};

@@ -1,0 +1,1 @@
+import{S as o}from"./-qH3dQ9-.js";import{u as r}from"./BKhM49SH.js";import{g as t,G as a,o as c}from"./CgSCGSuQ.js";import"./e9Ln5R2v.js";import"./UYNKEWoQ.js";const f={__name:"mobile",setup(i){const{trackServiceView:e}=r();return t(()=>{e("mobile")}),(s,m)=>(c(),a(o,{"service-type":"mobile"}))}};export{f as default};

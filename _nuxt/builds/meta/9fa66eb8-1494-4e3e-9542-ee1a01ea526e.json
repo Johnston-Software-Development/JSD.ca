@@ -1,0 +1,1 @@
+{"id":"9fa66eb8-1494-4e3e-9542-ee1a01ea526e","timestamp":1785112036201,"matcher":{"static":{"/":{"prerender":true},"/about":{"prerender":true},"/contact":{"prerender":true}},"wildcard":{"/services":{"prerender":true},"/projects":{"prerender":true}},"dynamic":{}},"prerendered":["/404","/500"]}

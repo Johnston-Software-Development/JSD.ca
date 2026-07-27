@@ -1,0 +1,356 @@
+<!DOCTYPE html><html  lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mobile-First Web App Prototype Development | Johnston Software Development</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"><style id="vuetify-theme-stylesheet">:root {
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 255,255,255;
+      --v-theme-surface-bright-overlay-multiplier: 1;
+      --v-theme-surface-light: 238,238,238;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 24,103,192;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 31,85,146;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 72,169,166;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-surface-bright: 0,0,0;
+      --v-theme-on-surface-light: 0,0,0;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 255,255,255;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 238, 238, 238;
+      --v-theme-on-kbd: 0, 0, 0;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .v-theme--light {
+      color-scheme: normal;
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 255,255,255;
+      --v-theme-surface-bright-overlay-multiplier: 1;
+      --v-theme-surface-light: 238,238,238;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 24,103,192;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 31,85,146;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 72,169,166;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-surface-bright: 0,0,0;
+      --v-theme-on-surface-light: 0,0,0;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 255,255,255;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 238, 238, 238;
+      --v-theme-on-kbd: 0, 0, 0;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .v-theme--dark {
+      color-scheme: dark;
+      --v-theme-background: 18,18,18;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 33,33,33;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 204,191,214;
+      --v-theme-surface-bright-overlay-multiplier: 2;
+      --v-theme-surface-light: 66,66,66;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 200,200,200;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 0,0,0;
+      --v-theme-primary: 33,150,243;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 39,124,193;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 84,182,178;
+      --v-theme-secondary-overlay-multiplier: 2;
+      --v-theme-secondary-darken-1: 72,169,166;
+      --v-theme-secondary-darken-1-overlay-multiplier: 2;
+      --v-theme-error: 207,102,121;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 2;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 2;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 2;
+      --v-theme-on-background: 255,255,255;
+      --v-theme-on-surface: 255,255,255;
+      --v-theme-on-surface-bright: 0,0,0;
+      --v-theme-on-surface-light: 255,255,255;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 255,255,255;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 255, 255, 255;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 1;
+      --v-medium-emphasis-opacity: 0.7;
+      --v-disabled-opacity: 0.5;
+      --v-idle-opacity: 0.1;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.16;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 66, 66, 66;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 52, 52, 52;
+      --v-theme-on-code: 204, 204, 204;
+    }
+    .bg-background {
+      --v-theme-overlay-multiplier: var(--v-theme-background-overlay-multiplier);
+      background-color: rgb(var(--v-theme-background)) !important;
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .bg-surface {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface)) !important;
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .bg-surface-bright {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-bright-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-bright)) !important;
+      color: rgb(var(--v-theme-on-surface-bright)) !important;
+    }
+    .bg-surface-light {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-light-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-light)) !important;
+      color: rgb(var(--v-theme-on-surface-light)) !important;
+    }
+    .bg-surface-variant {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-variant-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-variant)) !important;
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .bg-primary {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-overlay-multiplier);
+      background-color: rgb(var(--v-theme-primary)) !important;
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .bg-primary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-primary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .bg-secondary {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-overlay-multiplier);
+      background-color: rgb(var(--v-theme-secondary)) !important;
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .bg-secondary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-secondary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .bg-error {
+      --v-theme-overlay-multiplier: var(--v-theme-error-overlay-multiplier);
+      background-color: rgb(var(--v-theme-error)) !important;
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .bg-info {
+      --v-theme-overlay-multiplier: var(--v-theme-info-overlay-multiplier);
+      background-color: rgb(var(--v-theme-info)) !important;
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .bg-success {
+      --v-theme-overlay-multiplier: var(--v-theme-success-overlay-multiplier);
+      background-color: rgb(var(--v-theme-success)) !important;
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .bg-warning {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-overlay-multiplier);
+      background-color: rgb(var(--v-theme-warning)) !important;
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+    .text-background {
+      color: rgb(var(--v-theme-background)) !important;
+    }
+    .border-background {
+      --v-border-color: var(--v-theme-background);
+    }
+    .text-surface {
+      color: rgb(var(--v-theme-surface)) !important;
+    }
+    .border-surface {
+      --v-border-color: var(--v-theme-surface);
+    }
+    .text-surface-bright {
+      color: rgb(var(--v-theme-surface-bright)) !important;
+    }
+    .border-surface-bright {
+      --v-border-color: var(--v-theme-surface-bright);
+    }
+    .text-surface-light {
+      color: rgb(var(--v-theme-surface-light)) !important;
+    }
+    .border-surface-light {
+      --v-border-color: var(--v-theme-surface-light);
+    }
+    .text-surface-variant {
+      color: rgb(var(--v-theme-surface-variant)) !important;
+    }
+    .border-surface-variant {
+      --v-border-color: var(--v-theme-surface-variant);
+    }
+    .on-surface-variant {
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .text-primary {
+      color: rgb(var(--v-theme-primary)) !important;
+    }
+    .border-primary {
+      --v-border-color: var(--v-theme-primary);
+    }
+    .text-primary-darken-1 {
+      color: rgb(var(--v-theme-primary-darken-1)) !important;
+    }
+    .border-primary-darken-1 {
+      --v-border-color: var(--v-theme-primary-darken-1);
+    }
+    .text-secondary {
+      color: rgb(var(--v-theme-secondary)) !important;
+    }
+    .border-secondary {
+      --v-border-color: var(--v-theme-secondary);
+    }
+    .text-secondary-darken-1 {
+      color: rgb(var(--v-theme-secondary-darken-1)) !important;
+    }
+    .border-secondary-darken-1 {
+      --v-border-color: var(--v-theme-secondary-darken-1);
+    }
+    .text-error {
+      color: rgb(var(--v-theme-error)) !important;
+    }
+    .border-error {
+      --v-border-color: var(--v-theme-error);
+    }
+    .text-info {
+      color: rgb(var(--v-theme-info)) !important;
+    }
+    .border-info {
+      --v-border-color: var(--v-theme-info);
+    }
+    .text-success {
+      color: rgb(var(--v-theme-success)) !important;
+    }
+    .border-success {
+      --v-border-color: var(--v-theme-success);
+    }
+    .text-warning {
+      color: rgb(var(--v-theme-warning)) !important;
+    }
+    .border-warning {
+      --v-border-color: var(--v-theme-warning);
+    }
+    .on-background {
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .on-surface {
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .on-surface-bright {
+      color: rgb(var(--v-theme-on-surface-bright)) !important;
+    }
+    .on-surface-light {
+      color: rgb(var(--v-theme-on-surface-light)) !important;
+    }
+    .on-primary {
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .on-primary-darken-1 {
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .on-secondary {
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .on-secondary-darken-1 {
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .on-error {
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .on-info {
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .on-success {
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .on-warning {
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+</style><style>*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--bg-primary);color:var(--text-primary);font-family:Space Grotesk,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;line-height:1.6}.body-container{display:flex;flex-direction:column;min-height:100vh}.body{flex:1;margin-top:80px}:root{--primary:#06f;--primary-dark:#0052cc;--accent:#00d9ff;--text-primary:#0a0e27;--text-secondary:#6b7280;--bg-primary:#fff;--bg-secondary:#f8fafc;--border:#e5e7eb}.container{margin:0 auto;max-width:1400px;padding:0 2rem}@media (max-width:768px){.container{padding:0 1.5rem}}</style><style>.site-header[data-v-465222ea]{-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);background:#fffc;border-bottom:1px solid rgba(0,0,0,.05);left:0;position:fixed;right:0;top:0;transition:all .3s ease;z-index:1000}.site-header.scrolled[data-v-465222ea]{background:#fffffff2;box-shadow:0 4px 20px #00000014}.nav-container[data-v-465222ea]{align-items:center;display:flex;justify-content:space-between;margin:0 auto;max-width:1400px;padding:1rem 2rem}.logo[data-v-465222ea]{align-items:baseline;display:flex;font-size:1.25rem;font-weight:700;gap:.5rem;text-decoration:none;transition:all .3s ease}.logo[data-v-465222ea]:hover{transform:translateY(-2px)}.logo-text[data-v-465222ea]{color:var(--text-primary)}.logo-accent[data-v-465222ea]{color:var(--primary)}.menu-toggle[data-v-465222ea]{background:none;border:none;cursor:pointer;display:none;padding:.5rem;z-index:1001}.hamburger[data-v-465222ea]{display:block;position:relative}.hamburger[data-v-465222ea],.hamburger[data-v-465222ea]:after,.hamburger[data-v-465222ea]:before{background:var(--text-primary);height:2px;transition:all .3s ease;width:28px}.hamburger[data-v-465222ea]:after,.hamburger[data-v-465222ea]:before{content:"";position:absolute}.hamburger[data-v-465222ea]:before{top:-8px}.hamburger[data-v-465222ea]:after{bottom:-8px}.hamburger.open[data-v-465222ea]{background:transparent}.hamburger.open[data-v-465222ea]:before{top:0;transform:rotate(45deg)}.hamburger.open[data-v-465222ea]:after{bottom:0;transform:rotate(-45deg)}.nav-menu[data-v-465222ea]{align-items:center;display:flex;gap:2rem}.nav-link[data-v-465222ea]{color:var(--text-secondary);font-size:.95rem;font-weight:600;padding:.5rem 0;position:relative;text-decoration:none;transition:all .3s ease}.nav-link[data-v-465222ea]:after{background:var(--primary);bottom:0;content:"";height:2px;left:0;position:absolute;transition:width .3s ease;width:0}.nav-link[data-v-465222ea]:hover{color:var(--primary)}.nav-link[data-v-465222ea]:hover:after{width:100%}.nav-link.router-link-active[data-v-465222ea]{color:var(--primary)}.nav-link.router-link-active[data-v-465222ea]:after{width:100%}.cta-link[data-v-465222ea]{background:var(--primary);border-radius:8px;color:#fff!important;padding:.75rem 1.5rem;transition:all .3s ease}.cta-link[data-v-465222ea]:after{display:none}.cta-link[data-v-465222ea]:hover{background:var(--primary-dark);box-shadow:0 4px 12px #0066ff4d;transform:translateY(-2px)}@media (max-width:968px){.menu-toggle[data-v-465222ea]{display:block}.nav-menu[data-v-465222ea]{align-items:flex-start;background:#fff;box-shadow:-4px 0 20px #0000001a;flex-direction:column;gap:1.5rem;height:100vh;padding:6rem 2rem 2rem;position:fixed;right:-100%;top:0;transition:right .3s ease;width:100%}.nav-menu.open[data-v-465222ea]{right:0}.nav-link[data-v-465222ea]{font-size:1.125rem;padding:.75rem 0;width:100%}.cta-link[data-v-465222ea]{margin-top:1rem;text-align:center;width:100%}}@media (max-width:768px){.nav-container[data-v-465222ea]{padding:1rem 1.5rem}.logo[data-v-465222ea]{font-size:1.125rem}}</style><style>.project-detail[data-v-5b9780e6]{background:var(--bg-primary)}.project-hero[data-v-5b9780e6]{align-items:center;background:linear-gradient(135deg,#0a0e27,#1a1f3a);display:flex;min-height:50vh;overflow:hidden;padding:8rem 2rem 4rem;position:relative}.gradient-overlay[data-v-5b9780e6],.hero-background[data-v-5b9780e6]{inset:0;position:absolute}.gradient-overlay[data-v-5b9780e6]{background:radial-gradient(circle at 30% 50%,rgba(0,102,255,.3),transparent 50%)}.hero-content[data-v-5b9780e6]{color:#fff;margin:0 auto;max-width:1200px;position:relative;text-align:center}.breadcrumb[data-v-5b9780e6]{display:flex;font-size:.875rem;gap:.5rem;justify-content:center;margin-bottom:2rem;opacity:.8}.breadcrumb a[data-v-5b9780e6]{color:#fff;text-decoration:none;transition:opacity .3s}.breadcrumb a[data-v-5b9780e6]:hover{opacity:1}.project-meta[data-v-5b9780e6]{display:flex;gap:1rem;justify-content:center;margin-bottom:1.5rem}.project-type[data-v-5b9780e6]{background:var(--primary);border-radius:8px;color:#fff;letter-spacing:.05em;text-transform:uppercase}.project-date[data-v-5b9780e6],.project-type[data-v-5b9780e6]{font-size:.875rem;font-weight:600;padding:.5rem 1rem}.project-date[data-v-5b9780e6]{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);background:#ffffff1a;border:1px solid hsla(0,0%,100%,.2);border-radius:8px}.hero-title[data-v-5b9780e6]{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;margin-bottom:1rem}.hero-subtitle[data-v-5b9780e6]{font-size:1.25rem;line-height:1.6;margin:0 auto 2rem;max-width:700px;opacity:.9}.project-links[data-v-5b9780e6]{display:flex;gap:1rem;justify-content:center}.project-image-section[data-v-5b9780e6]{background:var(--bg-secondary);padding:4rem 0}.container[data-v-5b9780e6]{margin:0 auto;max-width:1200px;padding:0 2rem}.project-image-wrapper[data-v-5b9780e6]{border-radius:20px;box-shadow:0 20px 60px #0003;overflow:hidden}.project-image[data-v-5b9780e6]{display:block;height:auto;width:100%}.project-details[data-v-5b9780e6]{padding:6rem 0}.details-grid[data-v-5b9780e6]{display:grid;gap:4rem;grid-template-columns:1fr 350px}.main-content[data-v-5b9780e6]{display:flex;flex-direction:column;gap:3rem}.content-section h2[data-v-5b9780e6]{color:var(--text-primary);font-size:2rem;font-weight:700;margin-bottom:1.5rem}.about-text[data-v-5b9780e6],.description[data-v-5b9780e6]{color:var(--text-secondary);font-size:1.125rem;line-height:1.8;margin-bottom:1rem}.tech-stack[data-v-5b9780e6]{display:flex;flex-wrap:wrap;gap:.75rem}.tech-badge[data-v-5b9780e6]{background:var(--bg-secondary);border:2px solid var(--border);border-radius:10px;color:var(--text-secondary);font-weight:600;padding:.75rem 1.25rem;transition:all .3s ease}.tech-badge[data-v-5b9780e6]:hover{background:var(--primary);border-color:var(--primary);color:#fff;transform:translateY(-2px)}.sidebar[data-v-5b9780e6]{display:flex;flex-direction:column;gap:2rem}.info-card[data-v-5b9780e6]{background:var(--bg-secondary);border:2px solid var(--border);border-radius:16px;padding:2rem}.info-card h3[data-v-5b9780e6]{color:var(--text-primary);font-size:1.25rem;font-weight:700;margin-bottom:1.5rem}.info-list[data-v-5b9780e6]{gap:1.5rem}.info-item[data-v-5b9780e6],.info-list[data-v-5b9780e6]{display:flex;flex-direction:column}.info-item[data-v-5b9780e6]{gap:.5rem}.label[data-v-5b9780e6]{color:var(--text-secondary);font-size:.875rem;letter-spacing:.05em;text-transform:uppercase}.label[data-v-5b9780e6],.value[data-v-5b9780e6]{font-weight:600}.value[data-v-5b9780e6]{color:var(--text-primary);font-size:1rem}.value.link[data-v-5b9780e6]{color:var(--primary);text-decoration:none;transition:opacity .3s}.value.link[data-v-5b9780e6]:hover{opacity:.8}.jsd-badge[data-v-5b9780e6]{align-items:center;background:linear-gradient(135deg,#0066ff1a,#00d9ff1a);border-radius:12px;color:var(--primary);display:flex;font-size:.875rem;font-weight:600;gap:1rem;padding:1rem}.jsd-badge svg[data-v-5b9780e6]{flex-shrink:0;height:24px;width:24px}.project-navigation[data-v-5b9780e6]{background:var(--bg-secondary);padding:4rem 0}.nav-grid[data-v-5b9780e6]{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.nav-card[data-v-5b9780e6]{align-items:center;background:#fff;border:2px solid var(--border);border-radius:12px;color:var(--text-primary);display:flex;font-weight:600;gap:1rem;justify-content:center;padding:2rem;text-decoration:none;transition:all .3s ease}.nav-card[data-v-5b9780e6]:hover{border-color:var(--primary);box-shadow:0 12px 30px #0066ff26;transform:translateY(-4px)}.nav-arrow[data-v-5b9780e6]{color:var(--primary);font-size:1.5rem}.nav-card.prev[data-v-5b9780e6]{flex-direction:row}.nav-card.next[data-v-5b9780e6]{flex-direction:row-reverse}.cta-section[data-v-5b9780e6]{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;padding:6rem 2rem;text-align:center}.cta-content h2[data-v-5b9780e6]{font-size:clamp(2rem,5vw,3rem);font-weight:700;margin-bottom:1rem}.cta-content p[data-v-5b9780e6]{font-size:1.25rem;margin-bottom:2rem;opacity:.9}.btn[data-v-5b9780e6]{align-items:center;border:2px solid transparent;border-radius:12px;display:inline-flex;font-size:1rem;font-weight:600;gap:.5rem;padding:1rem 2rem;text-decoration:none;transition:all .3s ease}.btn-primary[data-v-5b9780e6]{background:var(--primary);box-shadow:0 4px 20px #0066ff4d;color:#fff}.btn-primary[data-v-5b9780e6]:hover{background:var(--primary-dark);box-shadow:0 8px 30px #06f6;transform:translateY(-2px)}.btn svg[data-v-5b9780e6]{height:20px;width:20px}.cta-section .btn-primary[data-v-5b9780e6]{background:#fff;color:var(--primary)}.cta-section .btn-primary[data-v-5b9780e6]:hover{background:var(--bg-secondary)}.btn-lg[data-v-5b9780e6]{font-size:1.125rem;padding:1.25rem 2.5rem}.not-found[data-v-5b9780e6]{align-items:center;display:flex;justify-content:center;min-height:80vh;padding:2rem;text-align:center}.not-found-content h1[data-v-5b9780e6]{color:var(--primary);font-size:6rem;font-weight:700;margin-bottom:1rem}.not-found-content p[data-v-5b9780e6]{color:var(--text-secondary);font-size:1.5rem;margin-bottom:2rem}@media (max-width:968px){.details-grid[data-v-5b9780e6]{gap:3rem;grid-template-columns:1fr}.sidebar[data-v-5b9780e6]{order:-1}.project-hero[data-v-5b9780e6]{padding:6rem 1.5rem 3rem}.container[data-v-5b9780e6]{padding:0 1.5rem}}</style><style>.site-footer[data-v-c04f1575]{background:linear-gradient(135deg,#0a0e27,#1a1f3a);color:#fff;padding:4rem 2rem 2rem}.footer-content[data-v-c04f1575]{margin:0 auto;max-width:1400px}.footer-grid[data-v-c04f1575]{display:grid;gap:3rem;grid-template-columns:2fr 1fr 1fr 1.5fr;margin-bottom:3rem}.brand-section[data-v-c04f1575]{max-width:350px}.footer-logo[data-v-c04f1575]{align-items:baseline;display:flex;font-size:1.5rem;font-weight:700;gap:.5rem;margin-bottom:1rem}@media screen and (max-width:412px){.footer-logo[data-v-c04f1575]{font-size:1.05rem}}.logo-text[data-v-c04f1575]{color:#fff}.logo-accent[data-v-c04f1575]{color:var(--accent)}.footer-tagline[data-v-c04f1575]{color:#ffffffb3;line-height:1.6;margin-bottom:1.5rem}.social-links[data-v-c04f1575]{display:flex;gap:1rem}.social-link[data-v-c04f1575]{align-items:center;background:#ffffff1a;border-radius:10px;color:#fff;display:flex;height:40px;justify-content:center;text-decoration:none;transition:all .3s ease;width:40px}.social-link[data-v-c04f1575]:hover{background:var(--primary);transform:translateY(-4px)}.social-link svg[data-v-c04f1575]{height:20px;width:20px}.footer-section h3[data-v-c04f1575]{color:#fff;font-size:1.125rem;font-weight:700;margin-bottom:1.5rem}@media screen and (max-width:412px){.email[data-v-c04f1575]{font-size:.85rem}}.footer-links[data-v-c04f1575]{display:flex;flex-direction:column;gap:.75rem;list-style:none;margin:0;padding:0}.footer-links a[data-v-c04f1575]{color:#ffffffb3;display:inline-block;text-decoration:none;transition:all .3s ease}.footer-links a[data-v-c04f1575]:hover{color:var(--accent);transform:translate(4px)}.footer-contact[data-v-c04f1575]{display:flex;flex-direction:column;gap:1rem;list-style:none;margin:0;padding:0}.footer-contact li[data-v-c04f1575]{align-items:flex-start;color:#ffffffb3;display:flex;gap:.75rem}.footer-contact svg[data-v-c04f1575]{flex-shrink:0;height:20px;margin-top:2px;width:20px;stroke:var(--accent)}.footer-contact a[data-v-c04f1575]{color:#ffffffb3;text-decoration:none;transition:color .3s ease}.footer-contact a[data-v-c04f1575]:hover{color:var(--accent)}.footer-bottom[data-v-c04f1575]{align-items:center;border-top:1px solid hsla(0,0%,100%,.1);color:#ffffff80;display:flex;font-size:.875rem;justify-content:space-between;padding-top:2rem}.built-with[data-v-c04f1575],.copyright[data-v-c04f1575]{margin:0}@media (max-width:968px){.footer-grid[data-v-c04f1575]{gap:2rem;grid-template-columns:repeat(2,1fr)}.brand-section[data-v-c04f1575]{grid-column:1/-1;max-width:100%}}@media (max-width:640px){.site-footer[data-v-c04f1575]{padding:3rem 1.5rem 1.5rem}.footer-grid[data-v-c04f1575]{gap:2rem;grid-template-columns:1fr}.footer-bottom[data-v-c04f1575]{flex-direction:column;gap:.5rem;text-align:center}}</style><link rel="stylesheet" href="/_nuxt/entry.BV0D2h8W.css" crossorigin><link rel="preload" as="fetch" crossorigin="anonymous" href="/projects/9/_payload.json?9fa66eb8-1494-4e3e-9542-ee1a01ea526e"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/CgSCGSuQ.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/24DHqFSA.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/e9Ln5R2v.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/DxcP9zVD.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/BKhM49SH.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/UYNKEWoQ.js"><link rel="preload" as="fetch" fetchpriority="low" crossorigin="anonymous" href="/_nuxt/builds/meta/9fa66eb8-1494-4e3e-9542-ee1a01ea526e.json"><link rel="prefetch" as="script" crossorigin href="/_nuxt/B5jmUGrG.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/C2AEm-oO.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/Cg1fV99I.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/DWE6NXHf.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/rX7yIMk6.js"><meta name="description" content="Built a mobile-first web application prototype using NextJS, showcasing key features and functionalities within a tight deadline."><meta name="theme-color" content="#0a0e27"><meta property="og:site_name" content="Johnston Software Development"><meta property="og:type" content="article"><meta property="og:locale" content="en_CA"><meta property="og:image" content="https://johnstonsoftwaredevelopment.ca/Mobile-First Web App Prototype Development.jpg"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://johnstonsoftwaredevelopment.ca/#website","name":"Johnston Software Development","url":"https://johnstonsoftwaredevelopment.ca","description":"Full-stack web and mobile development services in Durham Region, Ontario.","publisher":{"@id":"https://johnstonsoftwaredevelopment.ca/#business"}},{"@type":"LocalBusiness","@id":"https://johnstonsoftwaredevelopment.ca/#business","name":"Johnston Software Development","url":"https://johnstonsoftwaredevelopment.ca","email":"Derek@JohnstonSoftwareDevelopment.ca","telephone":"+19059268279","image":"https://johnstonsoftwaredevelopment.ca/me2.jpg","address":{"@type":"PostalAddress","addressLocality":"Oshawa","addressRegion":"ON","addressCountry":"CA"},"areaServed":{"@type":"AdministrativeArea","name":"Durham Region"},"description":"Full-stack web and mobile development services in Durham Region, Ontario.","founder":{"@type":"Person","name":"Derek Johnston"},"sameAs":["https://www.linkedin.com/company/johnston-software-development"]}]}</script><meta property="og:title" content="Mobile-First Web App Prototype Development"><meta property="og:description" content="Built a mobile-first web application prototype using NextJS, showcasing key features and functionalities within a tight deadline."><meta property="og:url" content="https://johnstonsoftwaredevelopment.ca/projects/9"><meta name="twitter:title" content="Mobile-First Web App Prototype Development"><meta name="twitter:description" content="Built a mobile-first web application prototype using NextJS, showcasing key features and functionalities within a tight deadline."><meta name="twitter:image" content="https://johnstonsoftwaredevelopment.ca/Mobile-First Web App Prototype Development.jpg"><meta name="robots" content="index, follow"><link rel="canonical" href="https://johnstonsoftwaredevelopment.ca/projects/9"><script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Mobile-First Web App Prototype Development","description":"Built a mobile-first web application prototype using NextJS, showcasing key features and functionalities within a tight deadline.","url":"https://johnstonsoftwaredevelopment.ca/projects/9","image":"https://johnstonsoftwaredevelopment.ca/Mobile-First Web App Prototype Development.jpg","creator":{"@type":"Organization","name":"Johnston Software Development"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://johnstonsoftwaredevelopment.ca"},{"@type":"ListItem","position":2,"name":"Mobile-First Web App Prototype Development","item":"https://johnstonsoftwaredevelopment.ca/projects/9"}]}</script><script type="module" src="/_nuxt/CgSCGSuQ.js" crossorigin></script><script id="unhead:payload" type="application/json">{"titleTemplate":"%s | Johnston Software Development"}</script></head><body><div id="__nuxt"><div class="body-container"><header class="site-header" data-v-465222ea><nav class="nav-container" data-v-465222ea><a href="/" class="logo" data-v-465222ea><span class="logo-text" data-v-465222ea>Johnston</span><span class="logo-accent" data-v-465222ea>Software</span><span class="logo-text" data-v-465222ea>Development</span></a><button class="menu-toggle" aria-label="Toggle menu" data-v-465222ea><span class="hamburger" data-v-465222ea></span></button><div class="nav-menu" data-v-465222ea><a href="/" class="nav-link" data-v-465222ea> Home </a><a href="/projects" class="nav-link" data-v-465222ea> Projects </a><a href="/about" class="nav-link" data-v-465222ea> About </a><!----><!----><!----><!----><a href="/contact" class="nav-link cta-link" data-v-465222ea> Contact </a></div></nav></header><main class="body"><!--[--><div></div><div class="project-detail" data-v-5b9780e6><section class="project-hero" data-v-5b9780e6><div class="hero-background" data-v-5b9780e6><div class="gradient-overlay" data-v-5b9780e6></div></div><div class="hero-content" data-v-5b9780e6><div class="breadcrumb" data-v-5b9780e6><a href="/" class="" data-v-5b9780e6> Home </a><span data-v-5b9780e6>/</span><a href="/projects" class="" data-v-5b9780e6> Projects </a><span data-v-5b9780e6>/</span><span data-v-5b9780e6>Mobile-First Web App Prototype Development</span></div><div class="project-meta" data-v-5b9780e6><span class="project-type" data-v-5b9780e6>web</span><!----></div><h1 class="hero-title" data-v-5b9780e6>Mobile-First Web App Prototype Development</h1><p class="hero-subtitle" data-v-5b9780e6>Built a mobile-first web application prototype using NextJS, showcasing key features and functionalities within a tight deadline.</p><!----></div></section><section class="project-image-section" data-v-5b9780e6><div class="container" data-v-5b9780e6><div class="project-image-wrapper" data-v-5b9780e6><img src="../Mobile-First Web App Prototype Development.jpg" alt="Mobile-First Web App Prototype Development" class="project-image" data-v-5b9780e6></div></div></section><section class="project-details" data-v-5b9780e6><div class="container" data-v-5b9780e6><div class="details-grid" data-v-5b9780e6><div class="main-content" data-v-5b9780e6><div class="content-section" data-v-5b9780e6><h2 data-v-5b9780e6>About the Project</h2><p class="description" data-v-5b9780e6></p><!----></div><div class="content-section" data-v-5b9780e6><h2 data-v-5b9780e6>Technologies Used</h2><div class="tech-stack" data-v-5b9780e6><!--[--><span class="tech-badge" data-v-5b9780e6>N</span><span class="tech-badge" data-v-5b9780e6>e</span><span class="tech-badge" data-v-5b9780e6>x</span><span class="tech-badge" data-v-5b9780e6>t</span><span class="tech-badge" data-v-5b9780e6>J</span><span class="tech-badge" data-v-5b9780e6>S</span><span class="tech-badge" data-v-5b9780e6>,</span><span class="tech-badge" data-v-5b9780e6>B</span><span class="tech-badge" data-v-5b9780e6>o</span><span class="tech-badge" data-v-5b9780e6>o</span><span class="tech-badge" data-v-5b9780e6>t</span><span class="tech-badge" data-v-5b9780e6>s</span><span class="tech-badge" data-v-5b9780e6>t</span><span class="tech-badge" data-v-5b9780e6>r</span><span class="tech-badge" data-v-5b9780e6>a</span><span class="tech-badge" data-v-5b9780e6>p</span><!--]--></div></div></div><div class="sidebar" data-v-5b9780e6><div class="info-card" data-v-5b9780e6><h3 data-v-5b9780e6>Project Info</h3><div class="info-list" data-v-5b9780e6><!----><div class="info-item" data-v-5b9780e6><span class="label" data-v-5b9780e6>Type</span><span class="value" data-v-5b9780e6>web</span></div><!----><!----></div></div><div class="info-card" data-v-5b9780e6><div class="jsd-badge" data-v-5b9780e6><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" data-v-5b9780e6><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-5b9780e6></path><polyline points="22 4 12 14.01 9 11.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-5b9780e6></polyline></svg><span data-v-5b9780e6>Johnston Software Development Project</span></div></div></div></div></div></section><section class="project-navigation" data-v-5b9780e6><div class="container" data-v-5b9780e6><div class="nav-grid" data-v-5b9780e6><a href="/projects/8" class="nav-card prev" data-v-5b9780e6><span class="nav-label" data-v-5b9780e6>Previous Project</span><span class="nav-arrow" data-v-5b9780e6>←</span></a><a href="/projects" class="nav-card all" data-v-5b9780e6><span class="nav-label" data-v-5b9780e6>All Projects</span></a><a href="/projects/10" class="nav-card next" data-v-5b9780e6><span class="nav-arrow" data-v-5b9780e6>→</span><span class="nav-label" data-v-5b9780e6>Next Project</span></a></div></div></section><section class="cta-section" data-v-5b9780e6><div class="cta-content" data-v-5b9780e6><h2 data-v-5b9780e6>Interested in Working Together?</h2><p data-v-5b9780e6>Let&#39;s discuss how we can help bring your project to life</p><a href="/contact" class="btn btn-primary btn-lg" data-v-5b9780e6>Start Your Project</a></div></section></div><!--]--></main><footer class="site-footer" data-v-c04f1575><div class="footer-content" data-v-c04f1575><div class="footer-grid" data-v-c04f1575><div class="footer-section brand-section" data-v-c04f1575><div class="footer-logo" data-v-c04f1575><span class="logo-text" data-v-c04f1575>Johnston</span><span class="logo-accent" data-v-c04f1575>Software</span><span class="logo-text" data-v-c04f1575>Development</span></div><p class="footer-tagline" data-v-c04f1575> Building digital experiences that transform business </p><div class="social-links" data-v-c04f1575><a href="https://github.com/derekjj" target="_blank" aria-label="GitHub" class="social-link" data-v-c04f1575><svg viewBox="0 0 24 24" fill="currentColor" data-v-c04f1575><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" data-v-c04f1575></path></svg></a><a href="https://www.linkedin.com/company/johnston-software-development" target="_blank" aria-label="LinkedIn" class="social-link" data-v-c04f1575><svg viewBox="0 0 24 24" fill="currentColor" data-v-c04f1575><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" data-v-c04f1575></path></svg></a><a href="/contact" class="social-link" aria-label="Contact" data-v-c04f1575><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" data-v-c04f1575><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-width="2" data-v-c04f1575></path><path d="M22 6l-10 7L2 6" stroke-width="2" data-v-c04f1575></path></svg></a></div></div><div class="footer-section" data-v-c04f1575><h3 class="footer-heading" data-v-c04f1575> Quick Links </h3><ul class="footer-links" data-v-c04f1575><li data-v-c04f1575><a href="/" class="" data-v-c04f1575> Home </a></li><li data-v-c04f1575><a href="/projects" class="" data-v-c04f1575> Projects </a></li><li data-v-c04f1575><a href="/about" class="" data-v-c04f1575> About </a></li><li data-v-c04f1575><a href="/contact" class="" data-v-c04f1575> Contact </a></li></ul></div><div class="footer-section" data-v-c04f1575><h3 class="footer-heading" data-v-c04f1575> Services </h3><ul class="footer-links" data-v-c04f1575><li data-v-c04f1575><a href="/services/web" class="" data-v-c04f1575> Web Development </a></li><li data-v-c04f1575><a href="/services/mobile" class="" data-v-c04f1575> Mobile Apps </a></li><li data-v-c04f1575><a href="/services/consulting" class="" data-v-c04f1575> Consulting </a></li></ul></div><div class="footer-section" data-v-c04f1575><h3 class="footer-heading" data-v-c04f1575> Get In Touch </h3><ul class="footer-contact" data-v-c04f1575><li data-v-c04f1575><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" data-v-c04f1575><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke-width="2" data-v-c04f1575></path><circle cx="12" cy="10" r="3" stroke-width="2" data-v-c04f1575></circle></svg><span data-v-c04f1575>Durham Region, ON</span></li><li data-v-c04f1575><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" data-v-c04f1575><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-width="2" data-v-c04f1575></path><path d="M22 6l-10 7L2 6" stroke-width="2" data-v-c04f1575></path></svg><a href="mailto:Derek@JohnstonSoftwareDevelopment.ca" class="email" data-v-c04f1575>Derek@JohnstonSoftwareDevelopment.ca</a></li><li data-v-c04f1575><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" data-v-c04f1575><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke-width="2" data-v-c04f1575></path></svg><a href="tel:9059268279" data-v-c04f1575>905.926.8279</a></li></ul></div></div><div class="footer-bottom" data-v-c04f1575><p class="copyright" data-v-c04f1575> © 2026 Johnston Software Development. All rights reserved. </p><p class="built-with" data-v-c04f1575> Built with Vue.js &amp; Nuxt.js </p></div></div></footer></div></div><div id="teleports"></div><script type="application/json" data-nuxt-data="nuxt-app" data-ssr="true" id="__NUXT_DATA__" data-src="/projects/9/_payload.json?9fa66eb8-1494-4e3e-9542-ee1a01ea526e">[{"state":1,"once":12,"_errors":13,"serverRendered":15,"path":16,"pinia":17,"prerenderedAt":154},["Reactive",2],{"$ssite-config":3},{"_priority":4,"description":8,"env":9,"name":10,"url":11},{"name":5,"env":6,"description":7,"url":5},-3,-15,-10,"Software Development Services","production","Johnston Software Development","https://johnstonsoftwaredevelopment.ca",["Set"],["ShallowReactive",14],{},true,"/projects/9",{"main":18},{"user":19,"authError":19,"projects":20,"loading":153,"authInitialized":153},null,[21,38,55,60,65,71,85,96,106,113,129,137,143,149],{"image":22,"tech":23,"description":28,"about":29,"project":30,"jsd":15,"teaser":31,"company":32,"type":33,"title":34,"url":35,"dates":36,"id":37},"../whosjimmy.png",[24,25,26,27],"PhP","VueJS","NuxtJS","Bootstrap","Johnston Software Development was honored to create the website for James Gawley, known as \"Jimmy Claws,\" a renowned special effects expert with an extensive career in the film industry. Our team designed and developed WhosJimmy.com to showcase Jim's impressive portfolio and personal journey. \n Jim's career highlights include his work on iconic films such as I, Robot, the X-Men series, and Pacific Rim. His innovative special effects and prosthetics have left a lasting impact on the industry. We aimed to capture his legacy by providing a platform that reflects his dedication, creativity, and expertise. \n The website features detailed accounts of Jim's contributions to the film industry, including his work on the 1991 film JFK, where he designed a prosthetic appliance for the assassination scene under the guidance of Gord Smith from FXSMITH. It also highlights his early fascination with mechanics, starting from disassembling toys at a young age to building go-karts and motorized bicycles in his \"Jimmy's Shop.\" \n Jim's journey from studying machine shop and drafting in school to refining his machining skills in a prototype shop and eventually creating Wolverine claws for the X-Men films is well documented. His passion for kinetic sculptures, such as clocks without faces, is also showcased, demonstrating his unique approach to timekeeping and his ability to blend art with precision engineering. \n By developing WhosJimmy.com, we provided a digital space that not only highlights Jim's professional achievements but also celebrates his lifelong passion for mechanics and innovation. The site is designed to be user-friendly and visually engaging, ensuring visitors can easily navigate through Jim's rich history and contributions to the film industry and beyond.","","Who's jimmy","Discover the incredible career of James \"Jimmy Claws\" Gawley, a special effects expert whose work has shaped iconic films like I, Robot, X-Men, and Pacific Rim. Explore his journey from childhood tinkerer to Hollywood legend on WhosJimmy.com. Click to learn more about the man behind the magic.","Who's Jimmy","web","Fullstack Web Developer","http://whosjimmy.com","April 2010 - Present","0",{"image":39,"teaser":40,"dates":41,"url":42,"description":43,"company":44,"tech":45,"about":29,"project":52,"type":33,"title":53,"id":54},"../oiika.png","A platform where passionate tutors and mentors share their knowledge with individuals like yourself.","May 2017 –  March 2019","http://oiika.com","Worked as part of the development team developing, utilizing google maps for visual displays of service areas and stripe to handle transactions.","Oiika",[46,47,48,49,50,51],"Node.js","React.js","MongoDB","Stripe","Google Maps API","React Native","oiika","Software Developer","1",{"project":56,"jsd":15,"tech":29,"longDescription":29,"url":29,"shortDescription":29,"description":29,"teaser":57,"title":29,"id":58,"about":29,"dates":29,"type":33,"image":59,"company":29},"Responsive Web Design Optimization Sprint","Optimized responsive design of client's website using Bootstrap and CSS Grid, ensuring consistent user experience across desktop and mobile devices.","10","../Responsive Web Design Optimization Sprint.jpg",{"url":29,"id":61,"description":29,"dates":29,"project":62,"image":63,"jsd":15,"about":29,"type":33,"teaser":64,"company":29,"title":29,"tech":29,"longDescription":29,"shortDescription":29},"11","Nuxt 2 to Nuxt 3 Upgrade Project","../Nuxt 2 to Nuxt 3 Upgrade Project.jpg","Upgraded client's web app from Nuxt 2 to Nuxt 3, leveraging Vue 3 Composition API, optimizing SSR performance, and integrating TypeScript.",{"tech":29,"image":66,"project":67,"type":33,"dates":29,"description":68,"url":29,"teaser":69,"title":29,"id":70,"about":29,"company":29,"jsd":15},"../Next.js Multi-Provider Authentication System.jpg","Next.js Multi-Provider Authentication System","Description:\nDeveloped a robust login system using Next.js, integrating multiple authentication providers including Google, LinkedIn, Azure, GitHub, and others. This project showcases seamless user authentication with diverse third-party APIs, ensuring secure and flexible access for a wide range of users.\n\nFeatures:\n\nNext.js Framework: Leveraged the power of Next.js for server-side rendering and static site generation.\nMultiple Auth Providers: Integrated with various OAuth providers such as Google, LinkedIn, Azure, GitHub, and more, allowing users to choose their preferred login method.\nSecure Authentication: Ensured user data protection and secure login processes using industry-standard authentication protocols.\nUser-Friendly Interface: Designed a clean and intuitive login interface to enhance user experience.\nScalable Architecture: Built a scalable authentication system to handle high traffic and ensure reliable performance.","Developed a robust login system using Next.js, integrating multiple authentication providers including Google, LinkedIn, Azure, GitHub, and others. This project showcases seamless user authentication with diverse third-party APIs, ensuring secure and flexible access for a wide range of users.","12",{"image":72,"description":73,"tech":74,"url":78,"company":79,"type":33,"title":80,"about":29,"dates":81,"teaser":82,"project":83,"id":84},"../edata-web.png","As a Junior Developer, I was involved in the development of the administration site for the eDataNow! mobile application, accessible at https://www.edatanow.com/. This platform is crucial for managing data collected from the mobile app, setting up audit tasks, and presenting data visually through graphs and charts. The frontend was developed using Vue.js, providing a responsive and interactive user interface that allowed administrators to efficiently manage and analyze data. The backend, powered by Ruby on Rails, ensured robust data handling and seamless integration with the mobile application. My responsibilities included implementing features for data collection, developing tools for audit task setup, and creating visual representations of data to facilitate better decision-making. This project provided me with valuable experience in web development and a deeper understanding of integrating frontend and backend technologies.",[24,25,26,75,27,76,77],"Ruby on Rails","Scout","JIRA","http://service.edatanow.com","E-Data Now!","Full Stack Web Developer","April 2018 - Sept 2019","I contributed to the development of the administration site for the eDataNow! mobile application, accessible at https://www.edatanow.com/. As a Junior Developer, I worked on features for data collection, audit task setup, and displaying graphs, using Vue.js for the frontend and Ruby on Rails for the backend.","edata","2",{"teaser":86,"description":87,"project":88,"image":89,"tech":90,"type":93,"url":29,"id":94,"company":10,"about":29,"jsd":15,"title":95},"Discover the communication app designed by Johnston Software Development to aid verbally limited individuals. Learn about the intuitive interface and customizable tools that enhance user communication. Click to learn more!","Johnston Software Development created a mobile application aimed at aiding verbally limited people in their communication efforts. The app features a user-friendly and accessible platform, utilizing Flutter for cross-platform development to ensure consistent performance on both iOS and Android devices. Key features include pre-set phrases, a customizable vocabulary, and voice output, designed to enhance the user's ability to interact and express themselves. Our team was responsible for designing the user interface, implementing core functionalities, and ensuring the app's reliability and ease of use, making a positive impact on the lives of individuals with verbal limitations.","TTC","../placeholder.jpg",[91,92],"SQLite","Flutter","app","3","TBD",{"image":97,"title":79,"longDescription":98,"company":79,"teaser":99,"project":100,"tech":101,"about":29,"id":105,"type":93},"../edata-app.png","As a Junior Developer, I was involved in the development of the eDataNow! mobile application, found at https://play.google.com/store/apps/details?id=com.edatanow.edatanow_app, using Flutter. My role encompassed building and refining multiple features to ensure smooth performance and an intuitive user experience across both iOS and Android devices. Working with Flutter allowed for a cohesive and efficient cross-platform development process. During this project, I collaborated closely with senior developers and other team members, contributing to the app's overall architecture and design. My responsibilities included writing clean and maintainable code, debugging, and optimizing the app's performance to meet user needs effectively. This experience helped me develop a strong foundation in mobile app development and teamwork..","I contributed to the development of the eDataNow! mobile application, available at https://play.google.com/store/apps/details?id=com.edatanow.edatanow_app, using Flutter. As a Junior Developer, I focused on building and enhancing various features to improve the app's functionality and user experience on both iOS and Android platforms.","edataApp",[102,103,104,75],"Swift","C++","Sqlite","4",{"about":29,"tech":107,"company":79,"description":98,"title":108,"type":93,"link":109,"image":110,"id":111,"project":112,"teaser":99},[91,92],"EDN Time","https://play.google.com/store/apps/details?id=com.edatanow.edatanow_app","../edata-app-time.png","5","edataTime",{"about":29,"image":114,"jsd":15,"id":115,"longDescription":116,"title":117,"project":118,"link":119,"company":118,"teaser":120,"tech":121,"description":127,"type":33,"shortDescription":128},"../tacklehunger.png","6","As a Senior Software Developer, I led the development of the map page for the \"Tackle Hunger\" initiative, accessible at https://map.tacklehunger.org/. The project's core was built using React, providing a robust and flexible framework for creating dynamic user interfaces. To enhance the mapping functionalities, I incorporated Mapbox GL JS, a powerful library that allowed for high-performance, interactive maps with a wide range of customization options. The application interfaces with a RESTful API, enabling real-time data updates and ensuring users have access to the most current information. The map page was designed with responsiveness in mind, ensuring an optimal experience on desktops, tablets, and mobile devices. My role involved not only the technical implementation but also collaborating with designers and stakeholders to deliver a feature-rich, user-centric mapping solution.","Mapping App","Tackle Hunger","https://map.tacklehunger.org/","Explore the interactive map created by Johnston Software Development for the \"Tackle Hunger\" initiative. Discover how we used cutting-edge technologies like React and Mapbox GL JS to provide real-time data and a seamless user experience. Click to see the full project!",[122,123,124,125,126],"NextJS","ReactJS","Mapbox","Material-UI","Algolia","Johnston Software Development was commissioned to develop the interactive map page for the \"Tackle Hunger\" project, available at Tackle Hunger Map. Our team utilized React for building a dynamic user interface and integrated Mapbox GL JS to deliver high-performance, customizable maps. The application connects to a RESTful API to provide real-time data updates, ensuring users have the latest information. Designed for responsiveness, the map offers an optimal experience across desktops, tablets, and mobile devices. We worked closely with designers and stakeholders to create a feature-rich, user-centric mapping solution.","I developed the interactive map page for the \"Tackle Hunger\" project at https://map.tacklehunger.org/. Utilizing React for the frontend, I integrated Mapbox GL JS for dynamic and customizable map features, and connected the application to a RESTful API for real-time data updates. The project emphasizes a responsive and user-friendly interface, ensuring seamless interaction across various devices.",{"title":130,"image":131,"about":29,"tech":132,"type":33,"teaser":134,"description":135,"longDescription":116,"id":136,"company":29,"project":130,"shortDescription":128,"jsd":15},"Shipping App","../shipping.jpg",[133,123,124,125,126],"JAVA","Discover how Johnston Software Development transformed a Cordova Android shipping app into a powerful Java application, seamlessly integrating it with an existing backend. Click to learn more about this behind-the-scenes project!","Johnston Software Development undertook a challenging subcontractor project for a prominent shipping company, adhering to strict confidentiality due to an NDA. Our task was to recreate their existing Cordova Android application into a robust Java application, ensuring seamless integration with the existing backend systems. \n This project involved deep technical expertise in both Cordova and Java, requiring careful planning and execution to maintain functionality while enhancing performance and reliability. By leveraging our extensive experience in mobile app development and backend integration, we successfully delivered a high-quality, scalable solution that met the client's stringent requirements. \n Our team's dedication to quality and precision ensured a smooth transition, minimizing downtime and disruption for the client's operations. This project exemplifies our ability to handle complex technical transformations while maintaining confidentiality and delivering exceptional results.","7",{"url":29,"description":29,"project":138,"tech":139,"about":29,"type":33,"jsd":15,"company":29,"dates":29,"teaser":140,"image":141,"title":29,"id":142},"Frontend UI/UX Enhancement","ReactJS,Tailwind CSS","Collaborated with team to enhance frontend UI/UX of an existing web application using ReactJS and Tailwind CSS, resulting in improved user engagement metrics.","../Enhancement Project.jpg","8",{"type":33,"teaser":144,"company":29,"about":29,"image":145,"jsd":15,"description":29,"title":29,"tech":146,"dates":29,"project":147,"url":29,"id":148},"Built a mobile-first web application prototype using NextJS, showcasing key features and functionalities within a tight deadline.","../Mobile-First Web App Prototype Development.jpg","NextJS,Bootstrap","Mobile-First Web App Prototype Development","9",{"type":33,"teaser":150,"company":29,"about":29,"image":145,"jsd":15,"description":29,"title":29,"tech":151,"dates":29,"project":152,"url":29,"id":58},"Builtaa a mobile-first web application prototype using NextJS, showcasing key features and functionalities within a tight deadline.","NextJS,Bootstrap,Ruby on Rails","Venmo of Canada",false,1785112084997]</script><script>window.__NUXT__={};window.__NUXT__.config={public:{FIREBASE_API_KEY:"AIzaSyB3JnUctT2-KT73sYNX7SkAEme_x5v15Pc",FIREBASE_AUTH_DOMAIN:"jsd-admin.firebaseapp.com",FIREBASE_PROJECT_ID:"jsd-admin",FIREBASE_STORAGE_BUCKET:"jsd-admin.appspot.com",FIREBASE_MESSAGING_SENDER_ID:"252945000748",FIREBASE_APP_ID:"1:252945000748:web:7c185d192ff570e6602489",FIREBASE_MEASUREMENT_ID:"G-HB9LTC4P17"},app:{baseURL:"/",buildId:"9fa66eb8-1494-4e3e-9542-ee1a01ea526e",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script></body></html>

@@ -1,0 +1,1 @@
+import{S as r}from"./-qH3dQ9-.js";import{u as o}from"./BKhM49SH.js";import{g as t,G as a,o as c}from"./CgSCGSuQ.js";import"./e9Ln5R2v.js";import"./UYNKEWoQ.js";const l={__name:"web",setup(s){const{trackServiceView:e}=o();return t(()=>{e("web")}),(i,p)=>(c(),a(r,{"service-type":"web"}))}};export{l as default};
