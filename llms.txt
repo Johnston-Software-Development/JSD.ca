@@ -1,0 +1,50 @@
+# Johnston Software Development
+
+> Johnston Software Development Inc. (JSD) is a software development company in Oshawa, Ontario, Canada, founded in 2020 by full-stack developer Derek Johnston. It builds custom web applications and mobile apps and provides technical consulting for businesses in Oshawa and Durham Region, Ontario, and works remotely with clients worldwide.
+
+Contact: Derek@JohnstonSoftwareDevelopment.ca, +1 905-926-8279. Contact form: https://johnstonsoftwaredevelopment.ca/contact/
+
+## Services
+
+- [Web Development](https://johnstonsoftwaredevelopment.ca/services/web/): Custom web apps, e-commerce, CMS and business dashboards built with Vue.js, Nuxt, React, Next.js and Node.js. Typical timeline 4-12 weeks.
+- [Mobile App Development](https://johnstonsoftwaredevelopment.ca/services/mobile/): iOS, Android and cross-platform apps with Flutter and React Native, from build to App Store / Google Play launch and ongoing support. Typical timeline 6-16 weeks.
+- [Technical Consulting](https://johnstonsoftwaredevelopment.ca/services/consulting/): Software architecture, code audits, performance tuning, legacy modernization and team mentoring. Hourly, project-based or retainer.
+
+## Projects
+
+- [Portfolio for special effects expert](https://johnstonsoftwaredevelopment.ca/projects/0/) (web, April 2010 - Present): Discover the incredible career of James "Jimmy Claws" Gawley, a special effects expert whose work has shaped iconic films like I, Robot, X-Men, and Pacific Rim. Explore his journey from childhood tinkerer to Hollywood legend on… Tech: VueJS 3, NuxtJS 3, VueJS 2, NuxtJS 2, Bootstrap, Php.
+- [Responsive Web Design Optimization Sprint](https://johnstonsoftwaredevelopment.ca/projects/10/) (web): Optimized responsive design of client's website using Bootstrap and CSS Grid, ensuring consistent user experience across desktop and mobile devices. Tech: Bootstrap, Git/GitHub for version control, React.
+- [Nuxt 2 to Nuxt 3 Upgrade Project](https://johnstonsoftwaredevelopment.ca/projects/11/) (web): Upgraded client's web app from Nuxt 2 to Nuxt 3, leveraging Vue 3 Composition API, optimizing SSR performance, and integrating TypeScript. Tech: Nuxt2, Nuxt3, Vue2, Vue3.
+- [Next.js Multi-Provider Authentication System](https://johnstonsoftwaredevelopment.ca/projects/12/) (web): Developed a robust login system using Next.js, integrating multiple authentication providers including Google, LinkedIn, Azure, GitHub, and others. This project showcases seamless user authentication with diverse third-party APIs,…
+- [Java-Based Dating App Static Demo](https://johnstonsoftwaredevelopment.ca/projects/14/) (app): Developed a static demo of a dating application using Java, featuring a user-friendly interface and showcasing key functionalities. Tech: Java, Git/GitHub for version control, Responsive Design Techniques.
+- [Canadian Venmo](https://johnstonsoftwaredevelopment.ca/projects/15/) (web, Nov 2024 - Nov 2024): Dockerized Development environment and updated documentation Tech: NextJS, Docker, Ruby on Rails.
+- [Home maintenance](https://johnstonsoftwaredevelopment.ca/projects/16/) (app): This project involved designing and developing a comprehensive mobile solution for homeowners and property managers to streamline residential upkeep. The application serves as a centralized hub for scheduling routine maintenance, tracking… Tech: Flutter, Firebase.
+- [Personalized Meteorological Intelligence](https://johnstonsoftwaredevelopment.ca/projects/17/) (app): This project involved the development of a high-performance, native Android weather application designed to provide users with hyper-local atmospheric data and personalized outdoor recommendations. Built using a robust combination of… Tech: Kotlin, JAVA, GeoMet-OGC-API.
+- [Membership Platform Modernization](https://johnstonsoftwaredevelopment.ca/projects/18/) (web, June 2026 - Present): Ongoing engineering partnership with a luxury watch subscription club: modernizing their admin platform and building new member experiences, from event tooling to a weekly sports pick'em game. Tech: Next.js, React, TypeScript, Tailwind CSS, MySQL, PHP, Playwright, Vitest.
+- [TTC](https://johnstonsoftwaredevelopment.ca/projects/3/) (app): Discover the communication app designed by Johnston Software Development to aid verbally limited individuals. Learn about the intuitive interface and customizable tools that enhance user communication. Click to learn more! Tech: SQLite, Flutter.
+- [Tackle Hunger](https://johnstonsoftwaredevelopment.ca/projects/6/) (web): Explore the interactive map created by Johnston Software Development for the "Tackle Hunger" initiative. Discover how we used cutting-edge technologies like React and Mapbox GL JS to provide real-time data and a seamless user experience.… Tech: NextJS, ReactJS, Mapbox, Material-UI, Algolia.
+- [Shipping App](https://johnstonsoftwaredevelopment.ca/projects/7/) (app): Discover how Johnston Software Development transformed a Cordova Android shipping app into a powerful Java application, seamlessly integrating it with an existing backend. Click to learn more about this behind-the-scenes project! Tech: JAVA, ReactJS, Mapbox, Material-UI, Algolia.
+- [Frontend UI/UX Enhancement](https://johnstonsoftwaredevelopment.ca/projects/8/) (web): Collaborated with team to enhance frontend UI/UX of an existing web application using ReactJS and Tailwind CSS, resulting in improved user engagement metrics. Tech: ReactJS, Tailwind CSS, JavaScript (ES6+), Git/GitHub for version control.
+- [Mobile-First Web App Prototype Development](https://johnstonsoftwaredevelopment.ca/projects/9/) (web): Built a mobile-first web application prototype using NextJS, showcasing key features and functionalities within a tight deadline. Tech: NextJS, Bootstrap.
+
+## Experience
+
+Derek Johnston's previous roles, most recent first:
+
+- Lead Full-Stack Developer, Youville Haussmann Park (YHP) (2021 - 2023): In this role, I implemented agile methodologies to accelerate project delivery, mentored junior developers, and conducted thorough code reviews to ensure best practices were followed. I fostered a collaborative and innovative environment, leading to the development of robust and versatile projects that significantly added value to the company. I was responsible for comprehensive staff… Key work: Wonderlab (main product), HR Onboarding System, Comprehensive Event Platform, Administrative Hub Application. Skills: Microsoft Azure, TypeScript, Express.js, React.js, GatsbyJS, PHP, Next.js, Docker Products, SASS, Redux.js.
+- Software Developer, E-Data Now! (2018 - 2019): I developed frontend and backend code for a near real-time data collection system for inspection and auditing in the automotive industry. I maintained test plans, wrote automated and load tests, enhanced dashboard functionality, and optimized slow API calls using Scout APM. Additionally, I resolved issues in iOS and Flutter codebases, improving performance and UX. My exceptional performance… Skills: Flutter, iOS, SASS, Ruby on Rails, Vue.js, Android, Nuxt.js, JavaScript, Amazon Web Services (AWS), Java.
+- Software Engineer, Oiika (2017 - 2019): I collaborated closely with a small team to design and develop an online platform using modern web technologies such as TypeScript, Express.js, and React.js. I played a key role in implementing responsive and dynamic user interfaces with ReactNative and Tailwind CSS, enhancing the platform's overall user experience. I optimized backend functionality using Node.js and Express.js, ensuring… Skills: TypeScript, Express.js, React.js, ReactNative, SASS, Git, Node.js, JavaScript, Tailwind CSS.
+
+## About
+
+- [About Derek Johnston](https://johnstonsoftwaredevelopment.ca/about/): Founder and lead developer; background, experience, skills and testimonials.
+- [All projects](https://johnstonsoftwaredevelopment.ca/projects/): Full portfolio with filters by type, and previous roles.
+
+## Optional
+
+Projects from previous roles:
+
+- oiika (web, May 2017 –  March 2019): A platform where passionate tutors and mentors share their knowledge with individuals like yourself. Tech: Node.js, React.js, MongoDB, Stripe, Google Maps API, React Native.
+- edata (web, April 2018 - Sept 2019): I contributed to the development of the administration site for the eDataNow! mobile application, accessible at https://www.edatanow.com/. As a Junior Developer, I worked on features for data collection, audit task setup, and displaying… Tech: PhP, VueJS, NuxtJS, Ruby on Rails, Bootstrap, Scout, JIRA.
+- edataApp (app): I contributed to the development of the eDataNow! mobile application, available at https://play.google.com/store/apps/details?id=com.edatanow.edatanow_app, using Flutter. As a Junior Developer, I focused on building and enhancing various… Tech: Swift, C++, Sqlite, Ruby on Rails.
+- edataTime (app): I contributed to the development of the eDataNow! mobile application, available at https://play.google.com/store/apps/details?id=com.edatanow.edatanow_app, using Flutter. As a Junior Developer, I focused on building and enhancing various… Tech: SQLite, Flutter.
