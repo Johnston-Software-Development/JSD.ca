@@ -1,0 +1,1 @@
+import{O as e,Q as t,X as n}from"./PdAqmEdH.js";import{t as r}from"./CM1xOekC.js";import{t as i}from"./CUKnbMAg.js";var a={__name:`mobile`,setup(a){let{trackServiceView:o}=r();return n(()=>{o(`mobile`)}),(n,r)=>(t(),e(i,{"service-type":`mobile`}))}};export{a as default};

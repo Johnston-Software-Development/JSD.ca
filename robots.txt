@@ -1,0 +1,14 @@
+# Search engines and AI assistants (GPTBot, ClaudeBot, PerplexityBot,
+# Google-Extended, ...) are welcome to read the public site.
+# A plain-text summary for AI tools: https://johnstonsoftwaredevelopment.ca/llms.txt
+User-agent: *
+Allow: /
+
+Disallow: /admin
+Disallow: /login
+Disallow: /auth
+Disallow: /testing
+Disallow: /account
+Disallow: /timeline
+
+Sitemap: https://johnstonsoftwaredevelopment.ca/sitemap.xml

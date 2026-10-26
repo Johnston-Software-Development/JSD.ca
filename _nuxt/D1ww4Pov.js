@@ -1,0 +1,1 @@
+import{O as e,Q as t,X as n}from"./PdAqmEdH.js";import{t as r}from"./CM1xOekC.js";import{t as i}from"./CUKnbMAg.js";var a={__name:`consulting`,setup(a){let{trackServiceView:o}=r();return n(()=>{o(`consulting`)}),(n,r)=>(t(),e(i,{"service-type":`consulting`}))}};export{a as default};

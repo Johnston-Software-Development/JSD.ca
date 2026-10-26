@@ -1,0 +1,1 @@
+import{s as e}from"#entry";var t=()=>{let t=(t,n={})=>{e().then(e=>e?.(t,n))};return{trackPageView:e=>t(`page_view`,{page_title:e}),trackContact:()=>t(`contact_form_submit`),trackProjectView:e=>t(`project_view`,{project_name:e}),trackServiceView:e=>t(`service_view`,{service_type:e}),trackExternalLink:e=>t(`external_link_click`,{url:e})}};export{t};
